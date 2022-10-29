@@ -1,0 +1,10 @@
+# Setup information
+- Note: it is recommended to run this on IntelliJ as that is where I did my developement.
+
+- the first step is to add ANTLR to the classpath, the ANTLR 4.7.2 jar is in the "lib" folder of the submission
+- test files are in the folders "custom-tests" and "tests"
+- type the following from "src" to compile and run with a test file: `javac minijava/*.java && java minijava.MiniJavaMain <path-to-test-file>`
+
+
+
+
