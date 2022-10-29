@@ -1,10 +1,18 @@
-# Setup information
-- Note: it is recommended to run this on IntelliJ as that is where I did my developement.
+# Compiler Frontend for the MiniJava Language
+## Description
+The MiniJava language is a subset of Java and the grammar for this language can be seen in `src/minijava/MiniJavaGrammar.g`.
+The compiler provided here performs parsing and semantic analysis of MiniJava language. The semantic analysis phase
+consists of both scope checking and type checking.
 
-- the first step is to add ANTLR to the classpath, the ANTLR 4.7.2 jar is in the "lib" folder of the submission
-- test files are in the folders "custom-tests" and "tests"
+## File Structure
+- the `symbol_table` package in `src` contains all files needed to represent the symbol table used for scope checking.
+- the `minijava` package contains all other files.
+    - `MiniJavaMain.java` contains the main method which performs parsing and semantic analysis.
+    - other files prefixed with `MiniJava` are files used by ANLTR for parsing.
+    - all other files are used to carry out semantic analysis. `TypeChecker.java`, `SymbolTableBuilder.java` and `InheritanceResolver.java`
+    are the files that carry out the heavy lifting by traversing the parse tree.
+
+## How to run
+- the first step is to add ANTLR to the classpath, the ANTLR 4.7.2 jar is in the "lib" folder of the submission.
+- test files are in the "tests" folder.
 - type the following from "src" to compile and run with a test file: `javac minijava/*.java && java minijava.MiniJavaMain <path-to-test-file>`
-
-
-
-
