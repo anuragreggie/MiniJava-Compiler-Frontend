@@ -11,8 +11,8 @@ consists of both scope checking and type checking.
     - other files prefixed with `MiniJava` are files used by ANLTR for parsing.
     - all other files are used to carry out semantic analysis. `TypeChecker.java`, `SymbolTableBuilder.java` and `InheritanceResolver.java`
     are the files that carry out the heavy lifting by traversing the parse tree.
+- the "tests" folder contains some example MiniJava programs.
 
 ## How to run
 - the first step is to add ANTLR to the classpath, the ANTLR 4.7.2 jar is in the "lib" folder of the submission.
-- test files are in the "tests" folder.
 - type the following from "src" to compile and run with a test file: `javac minijava/*.java && java minijava.MiniJavaMain <path-to-minijava-program-file>`
