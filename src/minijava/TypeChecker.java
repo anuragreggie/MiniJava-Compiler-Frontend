@@ -11,6 +11,7 @@ import java.util.Set;
 public class TypeChecker extends MiniJavaGrammarBaseVisitor<String> {
     private final SymbolTable symbolTable;
     private final Set<String> primitives;
+    
     TypeChecker(SymbolTable symbolTable) {
         this.symbolTable = symbolTable;
         this.primitives = new HashSet<>();
