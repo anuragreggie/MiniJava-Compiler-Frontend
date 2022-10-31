@@ -1,8 +1,11 @@
 # Compiler Frontend for the MiniJava Language
 ## Description
-The MiniJava language is a subset of Java and the grammar for this language can be seen in `src/minijava/MiniJavaGrammar.g`.
-The compiler provided here performs parsing and semantic analysis of MiniJava language. The semantic analysis phase
-consists of both scope checking and type checking.
+The MiniJava language is a subset of the Java language and the grammar for MiniJava can be seen in `src/minijava/MiniJavaGrammar.g`.
+The compiler provided here performs parsing and semantic analysis on MiniJava programs. The semantic analysis phase
+consists of both scope checking and type checking. 
+
+If a MiniJava program is semantically valid the compiler prints out the symbol table, as a list of
+identifiers, types and an indication of which scope they belong to. 
 
 ## File Structure
 - the `symbol_table` package in `src` contains all files needed to represent the symbol table used for scope checking.
